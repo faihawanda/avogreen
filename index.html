@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvoGreen</title>
+
+    <link rel="stylesheet" href="src/output.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="home" class="relative min-h-screen overflow-hidden bg-[#c3dd69]">
+
+        <!-- Navbar -->
+        <nav id="navbar" class="relative z-50 px-6 py-5 transition-all duration-300 sm:px-10 lg:px-16 xl:px-20">
+            <div class="mx-auto flex max-w-[1400px] items-center justify-between">
+
+                <a href="#home" class="flex items-center gap-2 lg:gap-3">
+                    <img src="assets/avogreen-logo.png" alt="AvoGreen Logo" class="h-12 w-12 object-contain lg:h-14 lg:w-14">
+                    <span class="text-xl font-extrabold tracking-tight text-[#173f2a] lg:text-2xl">AvoGreen</span>
+                </a>
+
+                <div class="hidden items-center gap-8 md:flex lg:gap-10">
+                    <a href="#home" class="text-lg font-bold text-[#173f2a] transition duration-300 hover:text-[#4cae43] lg:text-[20px]">Home</a>
+                    <a href="#jenis-buah" class="text-lg font-bold text-[#173f2a] transition duration-300 hover:text-[#4cae43] lg:text-[20px]">Jenis Buah</a>
+                    <a href="#khasiat" class="text-lg font-bold text-[#173f2a] transition duration-300 hover:text-[#4cae43] lg:text-[20px]">Khasiat</a>
+                    <a href="#tentang" class="text-lg font-bold text-[#173f2a] transition duration-300 hover:text-[#4cae43] lg:text-[20px]">Tentang Kami</a>
+                </div>
+
+                <button id="menu-button" type="button" class="flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-lg md:hidden">
+                    <span class="menu-line line-1 h-[3px] w-7 rounded-full bg-[#173f2a]"></span>
+                    <span class="menu-line line-2 h-[3px] w-7 rounded-full bg-[#173f2a]"></span>
+                    <span class="menu-line line-3 h-[3px] w-7 rounded-full bg-[#173f2a]"></span>
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="invisible absolute left-5 right-5 top-[85px] -translate-y-3 rounded-2xl bg-[#f7f7e9] p-6 opacity-0 shadow-xl transition-all duration-300 md:hidden">
+                <div class="flex flex-col gap-5">
+                    <a href="#home" class="mobile-link text-lg font-bold text-[#173f2a]">Home</a>
+                    <a href="#jenis-buah" class="mobile-link text-lg font-bold text-[#173f2a]">Jenis Buah</a>
+                    <a href="#khasiat" class="mobile-link text-lg font-bold text-[#173f2a]">Khasiat</a>
+                    <a href="#tentang" class="mobile-link text-lg font-bold text-[#173f2a]">Tentang Kami</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="relative z-10 mx-auto flex min-h-[calc(100vh-100px)] max-w-[1400px] items-center px-6 sm:px-10 lg:px-16 xl:px-20">
+            <div class="grid w-full grid-cols-1 items-center gap-10 pb-14 lg:grid-cols-2 lg:gap-4 lg:pb-20">
+
+                <div class="fade-up">
+                    <h1 class="text-[40px] font-extrabold leading-[1.05] tracking-[-2px] text-[#073e27] sm:text-[55px] md:text-[56px] lg:text-[58px] xl:text-[62px]">
+                        ALPUKAT PILIHAN
+                        <br>
+                        UNTUK HIDUP SEHAT
+                    </h1>
+
+                    <div class="my-12 h-[3px] w-11 bg-[#173f2a]"></div>
+
+                    <p class="max-w-[510px] text-lg leading-[1.6] text-[#42704b] sm:text-xl lg:text-[21px]">
+                        Nikmati kesegaran dan manfaat alpukat
+                        <br class="hidden sm:block">
+                        untuk tubuh yang lebih baik.
+                    </p>
+
+                    <a href="#jenis-buah" class="mt-8 inline-flex items-center gap-2 rounded-md bg-[#4caf43] px-5 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#399936] hover:shadow-lg sm:text-base">
+                        JELAJAHI JENIS BUAH <span class="text-lg">→</span>
+                    </a>
+                </div>
+
+                <div class="fade-right flex justify-center lg:justify-end">
+                    <img src="assets/avocado-hero.png" alt="Alpukat" class="floating w-[85%] max-w-[520px] object-contain lg:max-w-[570px] xl:max-w-[620px]">
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Tentang AvoGreen -->
+    <section id="tentang" class="bg-white px-6 py-16 sm:px-10 lg:px-16 lg:py-20 xl:px-20">
+      <div class="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+        <div class="fade-section  flex justify-center lg:justify-between">
+          
+          <img src="assets/avocado-about.png" alt="Alpukat AvoGreen" class="w-full max-w-[500px] rounded-none object-cover sm:rounded-sm">
+        </div>
+
+        <div class="fade-section">
+          <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+            Tentang Kami
+        </span>
+
+        <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+            Kami Adalah AvoGreen
+        </h2>
+
+        <p class="mt-3 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+            AvoGreen hadir untuk menghadirkan buah alpukat berkualitas terbaik,
+            langsung dari petani lokal untuk mendukung hidup sehat dan berkelanjutan.
+        </p>
+
+        <a href="#jenis-buah" class="mt-20 inline-flex rounded-md bg-[#4caf43] px-4 py-2 text-[13px] font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#398f37] sm:text-lg">
+            Pelajari lebih lanjut →
+        </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Jenis Buah -->
+    <section id="jenis-buah" class="bg-white px-4 py-14 sm:px-8 lg:px-12 lg:py-20">
+      <div class="mx-auto max-w-[1400px]">
+
+        <div class="mb-8 px-2 lg:mb-10">
+          <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+            Jenis & Khasiat Buah
+          </span>
+
+          <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+            Varian Alpukat & Khasiatnya
+          </h2>
+
+          <p class="mt-3 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+            Setiap jenis alpukat memiliki rasa dan manfaat yang berbeda
+            <br class="hidden sm:block">
+              pilih yang paling cocok untuk kebutuhanmu.
+          </p>
+        </div>
+
+      <div class="fruit-slider flex gap-4 overflow-x-auto px-2 pb-4 lg:grid lg:grid-cols-5 lg:overflow-visible">
+
+          <!-- Card 1 -->
+          <article class="fruit-card min-w-[180px] flex-1 rounded-xl bg-[#c3dd69] p-3 transition duration-300 hover:-translate-y-2 hover:shadow-lg sm:min-w-[200px] lg:min-w-0">
+              <img src="assets/avocado-1.png" alt="Alpukat Miki" class="mx-auto h-28 w-full object-contain sm:h-32">
+
+              <h3 class="mt-2 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Alpukat Miki
+              </h3>
+
+              <p class="mt-1 text-[9px] font-medium text-[#4f7049] sm:text-[10px]">
+                  Alpukat dengan rasa creamy dan tekstur lembut.
+              </p>
+
+              <ul class="mt-3 space-y-1 text-[8px] text-[#456543] sm:text-[9px]">
+                  <li>● Kaya vitamin dan mineral</li>
+                  <li>● Tekstur sangat lembut</li>
+                  <li>● Cocok untuk keluarga</li>
+              </ul>
+
+              <button class="mt-3 w-full rounded-full bg-[#4caf43] py-1.5 text-[8px] font-semibold text-white sm:text-[9px]">
+                  Lihat Khasiat →
+              </button>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="fruit-card min-w-[180px] flex-1 rounded-xl bg-[#c3dd69] p-3 transition duration-300 hover:-translate-y-2 hover:shadow-lg sm:min-w-[200px] lg:min-w-0">
+              <img src="assets/avocado-2.png" alt="Alpukat Wina" class="mx-auto h-28 w-full object-contain sm:h-32">
+
+              <h3 class="mt-2 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Alpukat Wina
+              </h3>
+
+              <p class="mt-1 text-[9px] font-medium text-[#4f7049] sm:text-[10px]">
+                  Memiliki rasa gurih dengan daging buah tebal.
+              </p>
+
+              <ul class="mt-3 space-y-1 text-[8px] text-[#456543] sm:text-[9px]">
+                  <li>● Kaya lemak sehat</li>
+                  <li>● Daging buah tebal</li>
+                  <li>● Rasa gurih</li>
+              </ul>
+
+              <button class="mt-3 w-full rounded-full bg-[#4caf43] py-1.5 text-[8px] font-semibold text-white sm:text-[9px]">
+                  Lihat Khasiat →
+              </button>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="fruit-card min-w-[180px] flex-1 rounded-xl bg-[#c3dd69] p-3 transition duration-300 hover:-translate-y-2 hover:shadow-lg sm:min-w-[200px] lg:min-w-0">
+              <img src="assets/avocado-3.png" alt="Alpukat Mentega" class="mx-auto h-28 w-full object-contain sm:h-32">
+
+              <h3 class="mt-2 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Alpukat Mentega
+              </h3>
+
+              <p class="mt-1 text-[9px] font-medium text-[#4f7049] sm:text-[10px]">
+                  Tekstur lembut dengan rasa manis yang khas.
+              </p>
+
+              <ul class="mt-3 space-y-1 text-[8px] text-[#456543] sm:text-[9px]">
+                  <li>● Sumber energi</li>
+                  <li>● Kaya vitamin</li>
+                  <li>● Tekstur lembut</li>
+              </ul>
+
+              <button class="mt-3 w-full rounded-full bg-[#4caf43] py-1.5 text-[8px] font-semibold text-white sm:text-[9px]">
+                  Pilih Varian →
+              </button>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="fruit-card min-w-[180px] flex-1 rounded-xl bg-[#c3dd69] p-3 transition duration-300 hover:-translate-y-2 hover:shadow-lg sm:min-w-[200px] lg:min-w-0">
+              <img src="assets/avocado-4.png" alt="Alpukat Ijo Panjang" class="mx-auto h-28 w-full object-contain sm:h-32">
+
+              <h3 class="mt-2 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Alpukat Ijo Panjang
+              </h3>
+
+              <p class="mt-1 text-[9px] font-medium text-[#4f7049] sm:text-[10px]">
+                  Bentuk unik dengan daging buah yang lembut.
+              </p>
+
+              <ul class="mt-3 space-y-1 text-[8px] text-[#456543] sm:text-[9px]">
+                  <li>● Kaya serat</li>
+                  <li>● Baik untuk pencernaan</li>
+                  <li>● Rasa creamy</li>
+              </ul>
+
+              <button class="mt-3 w-full rounded-full bg-[#4caf43] py-1.5 text-[8px] font-semibold text-white sm:text-[9px]">
+                  Lihat Detail →
+              </button>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="fruit-card min-w-[180px] flex-1 rounded-xl bg-[#c3dd69] p-3 transition duration-300 hover:-translate-y-2 hover:shadow-lg sm:min-w-[200px] lg:min-w-0">
+              <img src="assets/avocado-5.png" alt="Alpukat Fuerte" class="mx-auto h-28 w-full object-contain sm:h-32">
+
+              <h3 class="mt-2 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Alpukat Fuerte
+              </h3>
+
+              <p class="mt-1 text-[9px] font-medium text-[#4f7049] sm:text-[10px]">
+                  Memiliki rasa ringan dan aroma yang khas.
+              </p>
+
+              <ul class="mt-3 space-y-1 text-[8px] text-[#456543] sm:text-[9px]">
+                  <li>● Kaya nutrisi</li>
+                  <li>● Mengandung serat</li>
+                  <li>● Cocok untuk salad</li>
+              </ul>
+
+              <button class="mt-3 w-full rounded-full bg-[#4caf43] py-1.5 text-[8px] font-semibold text-white sm:text-[9px]">
+                  Lihat Detail →
+              </button>
+          </article>
+
+      </div>
+
+  </div>
+    </section> 
+
+    <!-- Manfaat Utama -->
+    <section id="khasiat" class="bg-[#c3dd69] px-6 py-14 sm:px-10 lg:px-16 lg:py-20 xl:px-20">
+      <div class="mx-auto max-w-[1400px]">
+
+        <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+          Manfaat Utama
+        </span>
+
+        <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+          Kenapa Pilih AvoGreen?
+        </h2>
+
+        <p class="mt-3 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+          Kami berkomitmen untuk memberikan alpukat terbaik
+          dengan kualitas, kesegaran, dan manfaat yang optimal.
+        </p>
+
+      <div class="px-6 py-14 mt-10 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-10">
+
+          <div class="benefit-card text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl">
+                  🌱
+              </div>
+              <h3 class="mt-3 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  100% Alami
+              </h3>
+              <p class="mt-1 text-[9px] leading-relaxed text-[#527450] sm:text-[10px]">
+                  Tanpa bahan pengawet
+              </p>
+          </div>
+
+          <div class="benefit-card text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl">
+                  💚
+              </div>
+              <h3 class="mt-3 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Bergizi Tinggi
+              </h3>
+              <p class="mt-1 text-[9px] leading-relaxed text-[#527450] sm:text-[10px]">
+                  Kaya vitamin dan mineral
+              </p>
+          </div>
+
+          <div class="benefit-card text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl">
+                  🚚
+              </div>
+              <h3 class="mt-3 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Langsung dari Petani
+              </h3>
+              <p class="mt-1 text-[9px] leading-relaxed text-[#527450] sm:text-[10px]">
+                  Mendukung petani lokal
+              </p>
+          </div>
+
+          <div class="benefit-card text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl">
+                  ⭐
+              </div>
+              <h3 class="mt-3 text-xs font-bold text-[#173f2a] sm:text-sm">
+                  Kualitas Terbaik
+              </h3>
+              <p class="mt-1 text-[9px] leading-relaxed text-[#527450] sm:text-[10px]">
+                  Dipilih dengan standar tinggi
+              </p>
+          </div>
+
+      </div>
+
+  </div>
+    </section>
+
+    <!-- Proses Kami -->
+    <section class="bg-white px-6 py-14 sm:px-10 lg:px-16 lg:py-20 xl:px-20">
+  <div class="mx-auto max-w-[1400px]">
+
+    <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+      Proses Kami
+    </span>
+
+    <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+      Dari Kebun ke Meja Anda
+    </h2>
+
+    <p class="mt-3 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+      Kami memastikan setiap buah alpukat melewati proses yang tepat
+      demi kualitas terbaik.
+    </p>
+
+      <div class="mt-10 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-10">
+
+          <div class="process-card text-center">
+              <img src="assets/process-1.png" alt="Panen" class="mx-auto h-40 w-48 object-contain sm:h-32 sm:w-40 lg:h-50 lg:w-58">
+
+              <h3 class="mt-3 text-base font-bold text-[#173f2a] sm:text-lg">
+                  1. Panen
+              </h3>
+
+              <p class="mt-1 text-[12px] leading-relaxed text-[#527450] sm:text-[12px]">
+                  Dipetik langsung dari kebun terbaik.
+              </p>
+          </div>
+
+          <div class="process-card text-center">
+              <img src="assets/process-2.png" alt="Sortir dan Packing" class="mx-auto h-40 w-48 object-contain sm:h-28 sm:w-36 lg:h-50 lg:w-58">
+
+              <h3 class="mt-3 text-base font-bold text-[#173f2a] sm:text-lg">
+                  2. Sortir & Packing
+              </h3>
+
+              <p class="mt-1 text-[12px] leading-relaxed text-[#527450] sm:text-[px]">
+                  Hanya yang terbaik yang kami pilih.
+              </p>
+          </div>
+
+          <div class="process-card text-center">
+              <img src="assets/process-3.png" alt="Pengiriman" class="mx-auto h-40 w-48 object-contain sm:h-28 sm:w-36 lg:h-50 lg:w-58">
+
+              <h3 class="mt-3 text-base font-bold text-[#173f2a] sm:text-lg">
+                  3. Pengiriman
+              </h3>
+
+              <p class="mt-1 text-[12px] leading-relaxed text-[#527450] sm:text-[12px]">
+                  Dengan pengiriman yang aman.
+              </p>
+          </div>
+
+          <div class="process-card text-center">
+              <img src="assets/process-4.png" alt="Sampai di Tangan Anda" class="mx-auto h-40 w-48 object-contain sm:h-28 sm:w-36 lg:h-50 lg:w-58">
+
+              <h3 class="mt-3 text-base font-bold text-[#173f2a] sm:text-lg">
+                  4. Sampai di Tangan Anda
+              </h3>
+
+              <p class="mt-1 text-[12px] leading-relaxed text-[#527450] sm:text-[12px]">
+                  Siap dinikmati dalam kondisi terbaik.
+              </p>
+          </div>
+
+      </div>
+
+  </div>
+    </section>    
+
+    <!-- Testimoni -->
+    <section class="bg-[#c3dd69] px-6 py-14 sm:px-10 lg:px-16 lg:py-20 xl:px-20">
+      <div class="mx-auto max-w-[1400px]">
+    
+        <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+          Testimoni
+        </span>
+    
+        <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+          Kata Mereka Tentang AvoGreen
+        </h2>
+    
+        <p class="mt-3 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+          Terima kasih untuk kepercayaan dan dukungan dari semua pelanggan kami.
+        </p>
+    
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+    
+              <article class="rounded-lg bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div class="flex items-center gap-2">
+                      <div class="h-8 w-8 rounded-full bg-gray-200"></div>
+                      <div>
+                          <h3 class="text-[10px] font-bold text-[#173f2a]">Rina S.</h3>
+                          <p class="text-[9px] text-[#f2b51d]">★★★★★</p>
+                      </div>
+                  </div>
+    
+                  <p class="mt-4 text-[9px] leading-relaxed text-[#527450]">
+                      "Alpukatnya fresh banget dan rasanya enak.
+                      Packaging-nya juga rapi. Pasti beli lagi!"
+                  </p>
+              </article>
+    
+              <article class="rounded-lg bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div class="flex items-center gap-2">
+                      <div class="h-8 w-8 rounded-full bg-gray-200"></div>
+                      <div>
+                          <h3 class="text-[10px] font-bold text-[#173f2a]">Rina S.</h3>
+                          <p class="text-[9px] text-[#f2b51d]">★★★★★</p>
+                      </div>
+                  </div>
+    
+                  <p class="mt-4 text-[9px] leading-relaxed text-[#527450]">
+                      "Kualitas buahnya bagus dan pengirimannya cepat.
+                      Sangat cocok untuk stok di rumah."
+                  </p>
+              </article>
+    
+              <article class="rounded-lg bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div class="flex items-center gap-2">
+                      <div class="h-8 w-8 rounded-full bg-gray-200"></div>
+                      <div>
+                          <h3 class="text-[10px] font-bold text-[#173f2a]">Rina S.</h3>
+                          <p class="text-[9px] text-[#f2b51d]">★★★★★</p>
+                      </div>
+                  </div>
+    
+                  <p class="mt-4 text-[9px] leading-relaxed text-[#527450]">
+                      "Saya suka karena buahnya terasa segar dan
+                      kualitasnya benar-benar terjaga."
+                  </p>
+              </article>
+    
+          </div>
+    
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="kontak" class="bg-[#c3dd69] px-3 pt-0 sm:px-6">
+  <div class="mx-auto max-w-[1400px] rounded-t-[35px] bg-[#f7f7e9] px-6 py-12 sm:rounded-t-[50px] sm:px-10 lg:px-16 lg:py-16">
+
+      <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+          <!-- Contact Info -->
+          <div>
+            <span class="inline-block rounded-full bg-[#4caf43] px-4 py-2 mb-4 text-[12px] font-semibold text-white sm:text-[12px]">
+              Hubungi Kami
+            </span>
+        
+            <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-1px] text-[#073e27] sm:text-4xl lg:text-[50px]">
+              Yuk, Jadi Bagian
+                  <br>
+                  dari Hidup Sehat!
+            </h2>
+        
+            <p class="mt-3 mb-14 max-w-[560px] text-sm leading-relaxed text-[#527450] sm:text-base">
+              Punya pertanyaan atau ingin pesan?
+                  Kami siap membantu.
+            </p>
+              <div class="mt-6 space-y-3">
+
+                  <a href="tel:+6200000000" class="flex items-center gap-3 text-xs font-medium text-[#173f2a]">
+                      <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#173f2a] text-white">
+                          ☎
+                      </span>
+                      +6200000000
+                  </a>
+
+                  <a href="mailto:hello@avogreen.id" class="flex items-center gap-3 text-xs font-medium text-[#173f2a]">
+                      <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#173f2a] text-white">
+                          ✉
+                      </span>
+                      hello@avogreen.id
+                  </a>
+
+                  <a href="#" class="flex items-center gap-3 text-xs font-medium text-[#173f2a]">
+                      <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#173f2a] text-white">
+                          ◎
+                      </span>
+                      @avocadotadi
+                  </a>
+
+              </div>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" class="rounded-2xl bg-white p-4 shadow-sm sm:p-5">
+
+              <div class="space-y-2">
+
+                  <input type="text" name="name" placeholder="Nama" required class="w-full rounded-md bg-[#eeeeee] px-4 py-2.5 text-xs text-[#173f2a] outline-none transition focus:ring-2 focus:ring-[#4caf43]">
+
+                  <input type="email" name="email" placeholder="Email" required class="w-full rounded-md bg-[#eeeeee] px-4 py-2.5 text-xs text-[#173f2a] outline-none transition focus:ring-2 focus:ring-[#4caf43]">
+
+                  <textarea name="message" rows="5" placeholder="Pesan" required class="w-full resize-none rounded-md bg-[#eeeeee] px-4 py-2.5 text-xs text-[#173f2a] outline-none transition focus:ring-2 focus:ring-[#4caf43]"></textarea>
+
+                  <button type="submit" class="w-full rounded-md bg-[#246b38] py-2.5 text-xs font-bold text-white transition duration-300 hover:bg-[#18542a]">
+                      Kirim pesan →
+                  </button>
+
+              </div>
+
+          </form>
+
+      </div>
+
+  </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative overflow-hidden bg-[#17482d] px-6 py-8 text-white sm:px-10 lg:px-16">
+
+  <div class="relative z-10 mx-auto max-w-[1400px]">
+
+      <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+
+          <a href="#home" class="flex items-center gap-2">
+              <img src="assets/avogreen-logo.png" alt="AvoGreen Logo" class="h-8 w-8 object-contain">
+              <span class="text-sm font-bold">AvoGreen</span>
+          </a>
+
+          <nav class="flex flex-wrap justify-center gap-5 text-[10px] font-semibold sm:gap-8 sm:text-xs">
+              <a href="#home" class="transition hover:text-[#c3dd69]">Home</a>
+              <a href="#jenis-buah" class="transition hover:text-[#c3dd69]">Jenis Buah</a>
+              <a href="#khasiat" class="transition hover:text-[#c3dd69]">Khasiat</a>
+              <a href="#tentang" class="transition hover:text-[#c3dd69]">Tentang Kami</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+              <a href="#" aria-label="Instagram" class="transition hover:text-[#c3dd69]"></a>
+              <a href="#" aria-label="Youtube" class="transition hover:text-[#c3dd69]">▶</a>
+              <a href="#" aria-label="TikTok" class="transition hover:text-[#c3dd69]">♪</a>
+          </div>
+
+      </div>
+
+      <div class="mt-6 border-t border-white/10 pt-5 text-center">
+          <p class="text-[8px] text-white/60 sm:text-[9px]">
+              © 2026 AvoGreen. All rights reserved.
+          </p>
+      </div>
+
+  </div>
+
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
